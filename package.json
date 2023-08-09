@@ -1,0 +1,13 @@
+{
+  "name": "playwright-practice",
+  "version": "1.0.0",
+  "description": "Just a practice",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Damián A. Bülau",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2"
+  }
+}
