@@ -53,3 +53,20 @@ test('Remove an item', async ({ page }) => {
 
 
 })
+
+test('Checkout OK', async ({ page }) => {
+    await page.getByText('Add to cart').first().click()
+    await page.locator('.shopping_cart_link').click()
+    await page.getByText('Checkout').click()
+    await page.waitForURL('https://www.saucedemo.com/checkout-step-one.html')
+
+})
+
+test('Checkout without items', async ({ page }) => {
+    await page.locator('.shopping_cart_link').click()
+
+    //Can't continue if user doesn't add an item to cart
+    await expect(page.getByText('Checkout')).toBeDisabled()
+
+
+})
